@@ -95,18 +95,6 @@ body{
     height: 100%;
  
 }
-#currentDateTime{
-    z-index: 1;
-    color: black;
-    font-size: 15px;
-    letter-spacing: 4px;
-   font-family: 'Gill Sans', 'Gill Sans MT' ;
-    position: fixed;
-    left: 20px;
-    top: 10px;
-    display: flex;
-    flex-direction: column-reverse;
-}
 #left
 {
     background-color:black;
@@ -164,98 +152,6 @@ body{
     color: orange;
     text-decoration: none;
 }
-/* *,*:before,*:after {
-    box-sizing: border-box;
-}
-
-:after {
-    content: "";
-}
-#nv {
-    position: fixed;
-    top: 150px;
-    right: 10px;
-    z-index: 1;
-    box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.1),
-    10px 5px 10px rgba(0, 0, 0, 0.15);
-}
-
-#nv ul {
-    text-align: center;
-    padding: 10px 0px 5px 0px;
-    border-radius: 20px;
-    background: transparent;
-    background-color: orange;
-}
-
-#nv ul li {
-    position: relative;
-    width: 50px;
-    height: 21px;
-    border-radius: 20px 0px 0px 20px;
-    padding: 15px 10px;
-    cursor: pointer;
-    margin: 40px 0px;
-    background: orange;
-    transition:all .4s ease-out;
-
-}
-
-
-#nv ul li:after {
-    z-index: 0;
-    border-radius: 0px 20px 20px 0px;
-    position: absolute;
-    background: orange;
-    color: white;
-    top:0;
-    left: 48px;
-    width: 70px; 
-    height: 100%;
-   /* opacity:.5;
-    transform: perspective(400px) rotateY(90deg);
-    transform-origin: 0 100%;
-    transition:all .1s ease-out;
-}
-
-#nv ul li:nth-child(1):after {
-    line-height: 30px; 
-    content: "HOME";
-    
-}
-#nv ul li:nth-child(2):after { 
-    line-height: 30px;
-    content: "ABOUT";
-    
-}
-#nv ul li:nth-child(3):after { 
-    content: "WORK";
-    line-height: 30px;
-    
-}
-#nv ul li:nth-child(4):after { 
-    content: "SAY HI";
-    line-height: 30px;
-    
-}
-
-#nv ul li:hover {
-    transform: translateX(-70px);
-}
-
-#nv ul li:hover:after {
-  opacity: 1;
-    transform: perspective(400px) rotateY(0deg) scale(1) ;
-}
-
-
-#nv ul li > a {
-    display: inline-block;
-    padding: 25px 0;
-    background: transparent;
-}
-
-#nv ul li a { position: relative; } */
 
 mark{
     background-color: orange;
@@ -500,12 +396,6 @@ mark:hover{
 <body ng-app="myapp" ng-controller="mycontroller" >
     <div id="navb"> 
         <ul>
-            <li >
-                <div id="currentDateTime">
-                    <p><span id="currentDate"></span></p>
-                    <p><span id="currentTime"></span></p>
-                </div>
-            </li>
             <li><a ng-click="showSection('home')"> HOME</a></li>
             <li><a ng-click="showSection('about')">ABOUT</a></li>
             <li><a ng-click="showSection('projects')">PROJECTS</a></li>
@@ -677,26 +567,6 @@ function light(){
    lw.style.color = "black";
    lo.style.backgroundColor = "#fffffff3";
 }
-
-
-function updateClock() {
-   const currentDate = new Date();
-   const options = { day: 'numeric', month: 'short', year: 'numeric' };
-   const currentDateString = currentDate.toLocaleDateString('en-US', options);
-   const currentTimeString = currentDate.toTimeString().split(' ')[0]; // Format: HH:mm
-   
-   // Update the displayed current date and time
-   document.getElementById("currentDate").innerHTML = currentDateString;
-   document.getElementById("currentTime").innerText = currentTimeString;
-   document.getElementById('calendar').value = currentDateString;
-}
-
-// Call the updateClock function every second
-setInterval(updateClock, 1000);
-
-// Initial call to display the current date and time immediately
-updateClock();
-
 
     </script>
 </body>

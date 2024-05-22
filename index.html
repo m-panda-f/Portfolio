@@ -5,7 +5,492 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="shortcut icon" href="PFP-modified.png">
-    <link rel="stylesheet" href="/port.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik+Lines&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    cursor: url("/yellow\ highlight.png") 10 10,auto;}
+input[type="radio"] {
+    display: none;
+  }
+
+  label {
+    cursor: pointer;
+    padding: 8px;
+    background-color: #ddd;
+    border-radius: 20px;
+    margin-right: 5px;
+    user-select: none;
+  }
+  #toggle-on{
+    position: fixed;
+    top: 5px;
+    right: 20px;
+  }
+  #toggle-off{
+    position: fixed;
+    top: 5px;
+    right: 10px;
+  }
+  #pic img{
+    width: 10px;
+  }
+  input[type="radio"]:checked + label {
+    background-color: #3498db;
+    color: #d10e0e;
+  }
+
+  #toggle-on:checked + label {
+    background-color: #ffffff;
+  }
+
+  #toggle-off:checked + label {
+    background-color: #474040;
+  }
+#light{
+    accent-color: white;
+    position: fixed;
+    right: 35px;
+    width: 18px;
+    height: 18px
+}
+#radio{
+    position: fixed;
+    right: 18px;
+    accent-color: black;
+    width: 18px;
+    height: 18px
+}
+#port{
+    
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+}
+body{ 
+    width: 100%;
+    height: 100%;
+    background-color: #f8a81e;
+}
+#boy{
+    width: 75%;
+    border-radius: 50%;
+    position: relative;
+    top: 10%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.549);
+    }
+
+#right
+{
+    float: right;
+    text-align: center;
+    justify-content:space-evenly;
+    background-color: #f8a81e;
+    width: 50%;
+    height: 100%;
+ 
+}
+#currentDateTime{
+    z-index: 1;
+    color: black;
+    font-size: 15px;
+    letter-spacing: 4px;
+   font-family: 'Gill Sans', 'Gill Sans MT' ;
+    position: fixed;
+    left: 20px;
+    top: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+#left
+{
+    background-color:black;
+    width: 55%;
+    color: white;
+    height: 100%;
+}
+
+#navbar{
+    font-family:'Rubik Lines', sans-serif ;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+
+#navb{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    
+
+}
+#navb ul{
+    font-family:'Rubik Lines';
+    display: flex;
+    align-items: start;
+    position: fixed;
+    flex-direction: row;
+    top: 1%;
+    right: 0px;
+    padding: 10px 20px;
+    justify-content: space-evenly;
+}
+
+#navb ul li{
+    
+   
+    position: relative;
+    list-style: none;
+    margin: 8px 37px;
+    top: 0px;
+    
+    list-style: none;
+    display: flex;    
+}
+#navb ul li a{
+    background-color: black;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: larger;
+    color: orange;
+    text-decoration: none;
+}
+/* *,*:before,*:after {
+    box-sizing: border-box;
+}
+
+:after {
+    content: "";
+}
+#nv {
+    position: fixed;
+    top: 150px;
+    right: 10px;
+    z-index: 1;
+    box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.1),
+    10px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+#nv ul {
+    text-align: center;
+    padding: 10px 0px 5px 0px;
+    border-radius: 20px;
+    background: transparent;
+    background-color: orange;
+}
+
+#nv ul li {
+    position: relative;
+    width: 50px;
+    height: 21px;
+    border-radius: 20px 0px 0px 20px;
+    padding: 15px 10px;
+    cursor: pointer;
+    margin: 40px 0px;
+    background: orange;
+    transition:all .4s ease-out;
+
+}
+
+
+#nv ul li:after {
+    z-index: 0;
+    border-radius: 0px 20px 20px 0px;
+    position: absolute;
+    background: orange;
+    color: white;
+    top:0;
+    left: 48px;
+    width: 70px; 
+    height: 100%;
+   /* opacity:.5;
+    transform: perspective(400px) rotateY(90deg);
+    transform-origin: 0 100%;
+    transition:all .1s ease-out;
+}
+
+#nv ul li:nth-child(1):after {
+    line-height: 30px; 
+    content: "HOME";
+    
+}
+#nv ul li:nth-child(2):after { 
+    line-height: 30px;
+    content: "ABOUT";
+    
+}
+#nv ul li:nth-child(3):after { 
+    content: "WORK";
+    line-height: 30px;
+    
+}
+#nv ul li:nth-child(4):after { 
+    content: "SAY HI";
+    line-height: 30px;
+    
+}
+
+#nv ul li:hover {
+    transform: translateX(-70px);
+}
+
+#nv ul li:hover:after {
+  opacity: 1;
+    transform: perspective(400px) rotateY(0deg) scale(1) ;
+}
+
+
+#nv ul li > a {
+    display: inline-block;
+    padding: 25px 0;
+    background: transparent;
+}
+
+#nv ul li a { position: relative; } */
+
+mark{
+    background-color: orange;
+    font-family: 'Rubik Lines';
+    text-wrap: 50px;
+    padding: 5px;
+}
+strong{
+    color:#f8a81e;
+}
+mark:hover{
+    
+    font-size: 30px;
+    text-shadow: 2px 2px red;
+    cursor: pointer;
+}
+#navb ul li a:hover{
+    text-decoration: underline;
+    color: white;
+    font-size: 28px;
+    text-shadow: 2px 2px red;
+} 
+#home{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+    top: 45%;
+    text-align: center;
+    color: white;
+}
+#home p{
+    text-align: center;
+    padding: 10px;
+    margin: 20px 0;
+    line-height: 35px;
+}
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center vertically */
+    background: #f8a81e;
+    height: 100vh; /* Full viewport height */
+    padding: 0; 
+    position: relative;
+} 
+#title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #333333da;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    position: relative;
+}
+#title p {
+    position: absolute;
+    font-size: 100px;
+    letter-spacing: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* Adjust text color as needed */
+            
+}
+#title div {
+    /* width: 50%; */
+    font-size: 150px;
+    height: auto;
+    display: block;
+}
+
+#abt {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: row; */
+    background: black;
+    font-size: 18px;
+    color: white;
+    text-align: left; /* Center text */
+    border-radius: 12px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.75);
+    padding: 10px 0px;/* Center the element */
+}
+#abt section {
+    padding: 10px;
+    margin: 30px 50px;
+    flex: 1;
+    justify-content: space-around;
+    height: auto;
+    line-height: 35px;
+}
+
+#abt section h4{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 30px;
+    text-decoration: underline;
+
+}
+#box {display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 10px 20px;
+    position: relative;
+}
+#box p {
+    background-color: #333;
+    color: #f8a81e;
+    width: 175px;
+    height: 115px;
+    font-size: 50px;
+    text-transform: uppercase;
+    padding: 15px;
+}
+#box p span {
+    display: ruby;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center vertically */
+    background: #f8a81e;
+    height: 100vh; /* Full viewport height */
+    padding: 0; 
+    position: relative;
+}
+
+#cont {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    /* flex-direction: row; */
+    background: black;
+    font-size: 18px;
+    color: white;
+    text-align: left; /* Center text */
+    border-radius: 12px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.75);
+    padding: 10px 0px;/* Center the element */
+}
+
+#form {
+    flex: 1;
+    margin: 10px 20px;
+}
+
+#form input, #form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc; /* Change as needed */
+}
+
+#form button {
+    padding: 10px 20px;
+    background-color: orange; /* Change as needed */
+    color: #fff; /* Change as needed */
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+#info {
+    flex: 1;
+    margin: 10px 20px;
+}
+
+#info h4 {
+    font-size: 1.2em;
+    color:orange;
+}
+
+#info p {
+    font-size: 1em;
+    color: #ffffff; /* Change as needed */
+}
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center vertically */
+    background: #f8a81e;
+    height: 100vh; /* Full viewport height */
+    padding: 0; 
+    position: relative;
+}
+
+
+#proj {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    /* flex-direction: row; */
+    background: black;
+    font-size: 18px;
+    color: white;
+    text-align: left; /* Center text */
+    border-radius: 12px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.75);
+    padding: 10px 0px;/* Center the element */
+}
+
+#proj div {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+}
+
+#proj img {
+    width: 250px;
+}
+
+#proj h4 {
+    font-size: 1.2em;
+    color: #fffefe; /* Change as needed */
+}
+
+#proj p {
+    font-size: 1em;
+    color: #cdc0c0; /* Change as needed */
+    width:350px;
+    height: 300px;
+    border: 1px solid #666; /* Change as needed */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+    </style>
     <script src="/port.js"></script>
     <script src="/Angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>

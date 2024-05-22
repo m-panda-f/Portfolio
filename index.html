@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="shortcut icon" href="PFP-modified.png">
+    <link rel="stylesheet" href="/port.css">
+    <script src="/port.js"></script>
+    <script src="/Angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+</head>
+<body ng-app="myapp" ng-controller="mycontroller" >
+    <div id="navb"> 
+        <ul>
+            <li >
+                <div id="currentDateTime">
+                    <p><span id="currentDate"></span></p>
+                    <p><span id="currentTime"></span></p>
+                </div>
+            </li>
+            <li><a ng-click="showSection('home')"> HOME</a></li>
+            <li><a ng-click="showSection('about')">ABOUT</a></li>
+            <li><a ng-click="showSection('projects')">PROJECTS</a></li>
+            <li><a ng-click="showSection('contact')">CONTACT</a></li>
+            <input type="radio" name="toggle" id="toggle-on" onclick="light()" checked>
+            <label for="toggle-on" id="pic"><img src="/sun.png" alt=""></label>
+            <input type="radio" onclick="dark()" name="toggle" id="toggle-off" checked>
+            <label for="toggle-off" id="pic"><img src="/moon.png" alt=""></label>
+        </ul>
+    </div>
+    <section id="port" ng-show="currentSection === 'home'">
+        <div id="right">
+            <div id="homea"></div>
+            <img src="Profile.jpeg" id="boy">
+        </div>
+        <div id="left">
+            <div id="home">
+                <h2>Hi there! I'm <mark>Mohammed Faizan</mark></h2> 
+                <p>I am a Computer Science student at NIE Institute of Technology. I have always been interested in programming and web development.</p>
+            </div>  
+        </div>
+    </section>
+    <!-- About section -->
+    <section id="about" ng-show="currentSection === 'about'" >
+        <div id="title"><div>RESUME</div><p>ABOUT</p></div>
+        <div id="abt" >
+            <section>
+                <h4>Personal Info</h4>
+                <div><strong>Name: </strong> Mohammed Faizan</div>
+                <div><strong>Phone: </strong> +91 9916588232</div>
+                <div><strong>Qualification: </strong>B.E (Computer Science)</div>
+                <div><strong>Age: </strong> 20</div>
+                <div><strong>Languages: </strong> English, Hindi, Kannada, urdu</div>
+                <div><strong>Nationality: </strong>Indian</div>
+            </section>
+            <section id="box">
+                
+                <p>3 <span>Projects</span></p>
+                <p>3 <span>Internships</span></p>
+                <p>10+ <span>Awards</span></p>
+                
+            </section>
+            
+        </div>
+    </section>
+    <section>
+        <div id="projects" ng-show="currentSection === 'projects'">
+            <div id="title"><div>MY WORK</div><p>PROJECTS</p></div>
+            <div id="proj">
+                <div id="proj1">
+                    <img src="/local/images/1.jpg" alt="">
+                    <h4>ZOO Management System</h4>
+                    <br>
+                    <p>
+                        <img src="Screenshot 2024-05-22 185133.png" alt="">
+                        <br>
+                        This project was built using Nodejs and simple JavaScript which is a web based software 
+application that manages the details of the Animals and also stores the information about them. It 
+also allows the user to book ticket online and it helps the user to visit the Zoo without any 
+hurdles and long queues. 
+                    </p>
+                </div>
+                <div id="proj2">
+                    
+                    <h4>Alumni Tracking System</h4>
+                    <br><p>
+                        <img src="/Screenshot 2024-03-14 091435.png" alt="">
+                        <br>
+                        This project was built using Nodejs and simple JavaScript which is a web based software 
+application that manages the details of the graduated student from the specific university and 
+allows them to get the daily event updates about their studied university. 
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" ng-show="currentSection === 'contact'">
+        <div id="title"><div>GET IN TOUCH</div><p>CONTACT</p></div>
+            <div id="cont">
+                <section id="form">
+                    <form id="contact-form" action="submit" >
+                        <input name="name" type="text" placeholder="Name">
+                        <input type="email" placeholder="Email" name="email">
+                        <textarea name="message" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                        <button>Send</button>
+                    </form>
+                </section>
+                <section id="info">
+                    <h4>Address</h4>
+                    <p id="p">#63 LIG 2 KHB Colony Kalayangiri Mysore</p>
+                    <h4>Email</h4>
+                    <p id="p">mohammedfaizan123h@gmail.com</p>
+                    <h4>Phone</h4>
+                    <p id="p">+91 9916588232</p>
+                </section>
+            </div>
+    </section>
+    <script>
+        var app = angular.module('myapp', []);
+        app.controller('mycontroller', function($scope) {
+        $scope.currentSection = 'home';
+
+        $scope.showSection = function(section) {
+        $scope.currentSection = section;
+            };
+        });
+       
+emailjs.init("hecxcItnw-wJp3Wsy"); // Replace with your EmailJS user ID
+document.querySelector('#contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var userEmail = document.querySelector('#contact-form input[name="email"]').value;
+
+    emailjs.sendForm('service_i6f7mdu', 'template_3s0x4jm', this, {
+            reply_to: userEmail,
+            name: document.querySelector('#contact-form input[name="name"]').value,
+            message: document.querySelector('#contact-form input[name="message"]').value
+            })
+            .then(function() {
+                alert('Email sent successfully!');
+            }, function(error) {
+                console.log('Failed to send email: ' + error);
+            });
+        });
+     // Replace with your EmailJS service ID and template ID
+    </script>
+</body>
+</html>

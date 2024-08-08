@@ -38,6 +38,7 @@ input[type="radio"] {
   }
   #pic img{
     width: 10px;
+    z-index: 1;
   }
   #toggle-on:checked + label {
     background-color: #ffffff;
@@ -390,7 +391,7 @@ mark:hover{
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 </head>
-<body ng-app="myapp" ng-controller="mycontroller" >
+<body ng-app="myapp" ng-controller="mycontroller">
     <div id="navb"> 
         <ul>
             <li><a ng-click="showSection('home')"> HOME</a></li>
@@ -454,7 +455,7 @@ also allows the user to book ticket online and it helps the user to visit the Zo
 hurdles and long queues. 
                     </p>
                 </div>
-                <div id="proj2">
+                <a href="https://github.com/m-panda-f/Alumni-Tracking-System"><div id="proj2">
                     <h4>Alumni Tracking System</h4>
                     <br><p>
                         <img src="Screenshot 2024-03-14 091435.png" alt="">
@@ -463,7 +464,17 @@ hurdles and long queues.
 application that manages the details of the graduated student from the specific university and 
 allows them to get the daily event updates about their studied university. 
                     </p>
-                </div>
+                </div></a>
+                <a href="https://github.com/m-panda-f/EvesGuide"><div id="proj3">
+                    <h4> Eve's Guide </h4>
+                    <br>
+                    <p>
+                      It is a Mobile Application Based Project built with flutter/ dart 
+language and firebase which is specifically built with a concept for Women’s Safety and their 
+Reproductive health. It comprises Safety Articles, Fake Caller, Medicine/pads Purchase 
+facilities, period Tracker and much more. 
+                    </p>
+                </div></a>
                 
             </div>
         </div>

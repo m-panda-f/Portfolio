@@ -1,3 +1,4 @@
+@ -1,703 +1,573 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="shortcut icon" href="PFP-modified.png">
-    
+    <link rel="stylesheet" href="/port.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Rubik+Lines&display=swap');
 *{
@@ -13,89 +14,6 @@
     padding: 0;
     list-style: none;
     cursor: url("/yellow\ highlight.png") 10 10,auto;}
-/* #boy.attached{
-    position: fixed;
-    z-index: 50;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255,255,255,0.5);
-    
-} */
- /* Base styles */
-
-
-#menu-toggle {
-    display: none;
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-@media (max-width: 768px) {
-
-    #menu-toggle {
-        display: block; /* Ensure the menu toggle is always visible on smaller screens */
-        width: 100%;
-        background-color: #333;
-        color: white;
-        border: none;
-        padding: 10px 0;
-        font-size: 16px;
-        cursor: pointer;
-    }
-
-    #port, #about, #projects, #contact {
-        /* Adjust layout for smaller screens */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    img {
-        max-width: 100%; /* Ensure images are not wider than their container */
-        height: auto; /* Maintain aspect ratio */
-    }
-
-    #navb ul { /* Adjusted from .header .navbar */
-        position: absolute;
-        top: 99%;
-        left: 0; right: 0;
-        background: var(--white);
-        border-top: .1rem solid var(--main);
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    }
-
-    #navb ul.active { /* Adjusted for the active class */
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
-
-    #navb li a { /* Adjusted from .header .navbar a */
-        display: block;
-        margin: 2rem;
-        font-size: 2rem;
-    }
-
-    /* The following styles depend on elements not shown in your provided HTML. */
-    /* Ensure these selectors match your actual HTML structure. */
-    .home {
-        background-position: left;
-    }
-
-    .home .content h3 {
-        font-size: 5rem;
-    }
-
-    .deco-title {
-        display: none;
-    }
-
-}
 input[type="radio"] {
     display: none;
   }
@@ -225,7 +143,6 @@ body{
     right: 0px;
     padding: 10px 20px;
     justify-content: space-evenly;
-    overflow: hidden;
 }
 
 #navb ul li{
@@ -235,7 +152,7 @@ body{
     list-style: none;
     margin: 8px 37px;
     top: 0px;
-    float: left;
+    
     list-style: none;
     display: flex;    
 }
@@ -576,50 +493,7 @@ mark:hover{
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
     </style>
-    <script>
-        
-function dark(){
-    const lo= document.getElementById("left");
-   const lw=document.getElementById("home");
-   const a=document.getElementById("abt");
-   const c=document.getElementById("cont");
-   const p=document.getElementById("proj");
-   const y=document.getElementById("p");
-   a.style.background = "black";
-   a.style.borderRadius = "12px";
-   a.style.color= "white";
-   y.style.color='white'
-   c.style.background = "black";
-   c.style.borderRadius = "12px";
-   c.style.color= "white";
-   p.style.background = "black";
-   p.style.borderRadius = "12px";
-   p.style.color= "white";
-   lw.style.color = "white";
-   lo.style.backgroundColor = "black";
-   
-}
-function light(){
-   const lo= document.getElementById("left");
-   const lw=document.getElementById("home");
-   const a=document.getElementById("abt");
-   const c=document.getElementById("cont");
-   const p=document.getElementById("proj");
-   const y=document.getElementById("p");
-  
-   a.style.background = "#fffffff3";
-   a.style.color= "black";
-   a.style.borderRadius = "12px";
-   y.style.color='black'
-   p.style.background = "#fffffff3";
-   p.style.color= "black";
-   p.style.borderRadius = "12px";
-   c.style.background = "#fffffff3";
-   c.style.color= "black";
-   c.style.borderRadius = "12px";
-   lw.style.color = "black";
-   lo.style.backgroundColor = "#fffffff3";
-}   </script>
+    <script src="/port.js"></script>
     <script src="/Angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
@@ -641,16 +515,8 @@ function light(){
             <label for="toggle-on" id="pic"><img src="/sun.png" alt=""></label>
             <input type="radio" onclick="dark()" name="toggle" id="toggle-off" checked>
             <label for="toggle-off" id="pic"><img src="/moon.png" alt=""></label>
-            <button id="menu-toggle">Menu</button>
         </ul>
     </div>
-    <script>
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            var nav = document.querySelector('#navb');
-          
-            nav.classList.toggle('active'); // This line toggles the 'active' class
-        });
-    </script>
     <section id="port" ng-show="currentSection === 'home'">
         <div id="right">
             <div id="homea"></div>
@@ -744,6 +610,7 @@ allows them to get the daily event updates about their studied university.
         var app = angular.module('myapp', []);
         app.controller('mycontroller', function($scope) {
         $scope.currentSection = 'home';
+
         $scope.showSection = function(section) {
         $scope.currentSection = section;
             };
@@ -766,6 +633,53 @@ document.querySelector('#contact-form').addEventListener('submit', function(even
             });
         });
      // Replace with your EmailJS service ID and template ID
+    </script>
+    <script>
+        
+function dark(){
+    const lo= document.getElementById("left");
+   const lw=document.getElementById("home");
+   const a=document.getElementById("abt");
+   const c=document.getElementById("cont");
+   const p=document.getElementById("proj");
+   const y=document.getElementById("p");
+   a.style.background = "black";
+   a.style.borderRadius = "12px";
+   a.style.color= "white";
+   y.style.color='white'
+   c.style.background = "black";
+   c.style.borderRadius = "12px";
+   c.style.color= "white";
+   p.style.background = "black";
+   p.style.borderRadius = "12px";
+   p.style.color= "white";
+   lw.style.color = "white";
+   lo.style.backgroundColor = "black";
+   
+}
+function light(){
+   const lo= document.getElementById("left");
+   const lw=document.getElementById("home");
+   const a=document.getElementById("abt");
+   const c=document.getElementById("cont");
+   const p=document.getElementById("proj");
+   const y=document.getElementById("p");
+  
+   a.style.background = "#fffffff3";
+   a.style.color= "black";
+   a.style.borderRadius = "12px";
+   y.style.color='black'
+   p.style.background = "#fffffff3";
+   p.style.color= "black";
+   p.style.borderRadius = "12px";
+   c.style.background = "#fffffff3";
+   c.style.color= "black";
+   c.style.borderRadius = "12px";
+   lw.style.color = "black";
+   lo.style.backgroundColor = "#fffffff3";
+}
+
+
     </script>
 </body>
 </html>

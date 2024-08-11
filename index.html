@@ -35,6 +35,7 @@ input[type="radio"] {
     position: fixed;
     top: 5px;
     right: 10px;
+    background-color: black;
   }
   #pic img{
     width: 10px;
@@ -45,7 +46,7 @@ input[type="radio"] {
   }
 
   #toggle-off:checked + label {
-    background-color: #474040;
+    background-color: #312c2c;
   }
 #light{
     accent-color: white;
@@ -271,6 +272,23 @@ mark:hover{
     font-size: 18px;
     color: white;
 }
+#box p a {
+    color: #f8a81e;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: 2px solid #f8a81e;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#box p a:hover {
+    background-color: #f8a81e;
+    color: #fff;
+    cursor: pointer;
+}
 #contact {
     display: flex;
     flex-direction: column;
@@ -361,7 +379,9 @@ mark:hover{
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.75);
     padding: 10px 0px;/* Center the element */
 }
-
+#proj1,#proj2,#proj3:hover{
+    cursor:grab;
+}
 #proj div {
     flex: 1;
     margin: 10px;
@@ -399,9 +419,9 @@ mark:hover{
             <li><a ng-click="showSection('projects')">PROJECTS</a></li>
             <li><a ng-click="showSection('contact')">CONTACT</a></li>
             <input type="radio" name="toggle" id="toggle-on" onclick="light()" checked>
-            <label for="toggle-on" id="pic"><img src="/sun.png" alt=""></label>
+            <label for="toggle-on" id="pic"><img src="sun.png" alt=""></label>
             <input type="radio" onclick="dark()" name="toggle" id="toggle-off" checked>
-            <label for="toggle-off" id="pic"><img src="/moon.png" alt=""></label>
+            <label for="toggle-off" id="pic"><img src="moon.png" alt=""></label>
         </ul>
     </div>
     <section id="port" ng-show="currentSection === 'home'">
@@ -434,6 +454,7 @@ mark:hover{
                 <p>3 <span>Projects</span></p>
                 <p>3 <span>Internships</span></p>
                 <p>10+ <span>Awards</span></p>
+                <p><a href="https://drive.google.com/uc?export=download&id=1Z6ujFmLi878hy7LDu05ut8juZs0k75Kr" download>&downarrow; Download</a> <span>CV</span></p>
                 
             </section>
             
@@ -455,7 +476,8 @@ also allows the user to book tickets online and it helps the user to visit the Z
 hurdles and long queues.
                     </p>
                 </div>
-                <a href="https://github.com/m-panda-f/Alumni-Tracking-System"><div id="proj2">
+                <div id="proj2">
+                    <a href="https://github.com/m-panda-f/Alumni-Tracking-System">
                     <h4>Alumni Tracking System</h4>
                     <br><p>
                         <img src="Screenshot 2024-03-14 091435.png" alt="">
@@ -465,7 +487,8 @@ application that manages the details of the graduated student from the specific 
 allows them to get daily event updates about their studied university. 
                     </p>
                 </div>
-                <a href="https://github.com/m-panda-f/EvesGuide"><div id="proj3">
+                <div id="proj3">
+                    <a href="https://github.com/m-panda-f/EvesGuide">
                     <h4> Eve's Guide </h4>
                     <br>
                     <p>
@@ -559,7 +582,9 @@ function light(){
    const c=document.getElementById("cont");
    const p=document.getElementById("proj");
    const y=document.getElementById("p");
-  
+   const tt=document.getElementById("toggle-off");
+
+   tt.style.backgroundColor= "black";
    a.style.background = "#fffffff3";
    a.style.color= "black";
    a.style.borderRadius = "12px";

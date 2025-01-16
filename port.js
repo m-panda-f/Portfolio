@@ -44,9 +44,28 @@ function light(){
    lw.style.color = "black";
    lo.style.backgroundColor = "#fffffff3";
 }
+function myFunction(x) {
+    x.classList.toggle("change");
+  }
 document.getElementById('menu-button').addEventListener('click', function() {
-    var navUl = document.querySelector('#navb ul');
+    var navUl = document.querySelector('#navb');
     navUl.classList.toggle('active');
 });
 
-    
+document.addEventListener('DOMContentLoaded', function() {
+    const menuButton = document.getElementById('menu-button');
+    const navMenu = document.querySelector('#navb ul');
+
+    // Toggle the menu when menu button is clicked
+    menuButton.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+    });
+
+    // Hide the menu when a menu item is clicked
+    navMenu.addEventListener('click', function(event) {
+        if (event.target.tagName === 'A') {
+            navMenu.classList.remove('active');
+        }
+    });
+});
+

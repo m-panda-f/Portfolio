@@ -1,117 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Lines&display=swap');
 
-        @import url('https://fonts.googleapis.com/css2?family=Rubik+Lines&display=swap');
-*{
+* {
     margin: 0;
     padding: 0;
     list-style: none;
-    cursor: url("yellow\ highlight.png") 10 10,auto;}
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik Lines', sans-serif;
+    width: 100%;
+    height: 100%;
+    background-color: #f8a81e;
+}
+
 input[type="radio"] {
     display: none;
-  }
+}
 
-  label {
+label {
     cursor: pointer;
     padding: 8px;
     background-color: #ddd;
     border-radius: 20px;
     margin-right: 5px;
     user-select: none;
-  }
-  #toggle-on{
+}
+
+#toggle-on, #toggle-off {
     position: fixed;
     top: 5px;
     right: 20px;
-  }
-  #toggle-off{
-    position: fixed;
-    top: 5px;
+}
+
+#toggle-off {
     right: 10px;
     background-color: black;
-  }
-  #pic img{
+}
+
+#pic img {
     width: 10px;
     z-index: 1;
-  }
-  #toggle-on:checked + label {
-    background-color: #ffffff;
-  }
+}
 
-  #toggle-off:checked + label {
+#toggle-on:checked + label {
+    background-color: #ffffff;
+}
+
+#toggle-off:checked + label {
     background-color: #312c2c;
-  }
-#light{
-    accent-color: white;
+}
+
+#light, #radio {
     position: fixed;
     right: 35px;
     width: 18px;
-    height: 18px
+    height: 18px;
 }
-#radio{
-    position: fixed;
+
+#radio {
     right: 18px;
     accent-color: black;
-    width: 18px;
-    height: 18px
 }
-#port{
-    
+
+#port {
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
+}
 
-}
-body{ 
-    width: 100%;
-    height: 100%;
-    background-color: #f8a81e;
-}
-#boy{
+#boy {
     width: 75%;
     border-radius: 50%;
     position: relative;
     top: 10%;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.549);
-    }
+}
 
-#right
-{
+#right {
     float: right;
     text-align: center;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     background-color: #f8a81e;
     width: 50%;
     height: 100%;
- 
 }
 
-#left
-{
-    background-color:black;
+#left {
+    background-color: black;
     width: 55%;
     color: white;
     height: 100%;
 }
 
-#navbar{
-    font-family:'Rubik Lines', sans-serif ;
+#navbar {
     position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    
 }
 
-#navb{
+#navb {
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 1;
-    
-
 }
-#navb ul{
-    font-family:'Rubik Lines';
+
+#navb ul {
     display: flex;
     align-items: start;
     position: fixed;
@@ -122,18 +119,14 @@ body{
     justify-content: space-evenly;
 }
 
-#navb ul li{
-    
-   
+#navb ul li {
     position: relative;
     list-style: none;
     margin: 8px 37px;
-    top: 0px;
-    
-    list-style: none;
-    display: flex;    
+    display: flex;
 }
-#navb ul li a{
+
+#navb ul li a {
     background-color: black;
     border-radius: 20px;
     padding: 10px;
@@ -143,50 +136,50 @@ body{
     text-decoration: none;
 }
 
-mark{
+mark {
     background-color: orange;
-    font-family: 'Rubik Lines';
-    text-wrap: 50px;
     padding: 5px;
 }
-strong{
-    color:#f8a81e;
-}
-mark:hover{
-    
+
+mark:hover {
     font-size: 30px;
     text-shadow: 2px 2px red;
     cursor: pointer;
 }
-#navb ul li a:hover{
+
+#navb ul li a:hover {
     text-decoration: underline;
     color: white;
     font-size: 28px;
     text-shadow: 2px 2px red;
-} 
-#home{
+}
+
+#home {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     position: relative;
     top: 45%;
     text-align: center;
     color: white;
 }
-#home p{
+
+#home p {
     text-align: center;
     padding: 10px;
     margin: 20px 0;
     line-height: 35px;
 }
-#about {
+
+#about, #contact, #projects {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* Center vertically */
+    align-items: center;
     background: #f8a81e;
-    height: 100vh; /* Full viewport height */
-    padding: 0; 
+    height: 100vh;
+    padding: 0;
     position: relative;
-} 
+}
+
 #title {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #333333da;
@@ -196,6 +189,7 @@ mark:hover{
     text-transform: uppercase;
     position: relative;
 }
+
 #title p {
     position: absolute;
     font-size: 100px;
@@ -204,30 +198,29 @@ mark:hover{
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: white; /* Adjust text color as needed */
-            
+    color: white;
 }
+
 #title div {
-    /* width: 50%; */
     font-size: 150px;
     height: auto;
     display: block;
 }
 
-#abt {
+#abt, #cont, #proj {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: flex;
     justify-content: space-between;
-    /* flex-direction: row; */
     background: black;
     font-size: 18px;
     color: white;
-    text-align: left; /* Center text */
+    text-align: left;
     border-radius: 12px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.75);
-    padding: 10px 0px;/* Center the element */
+    padding: 10px 0px;
 }
-#abt section {
+
+#abt section, #form, #info, #proj div {
     padding: 10px;
     margin: 30px 50px;
     flex: 1;
@@ -236,18 +229,20 @@ mark:hover{
     line-height: 35px;
 }
 
-#abt section h4{
+#abt section h4, #proj h4 {
     text-transform: uppercase;
     margin-bottom: 10px;
     font-size: 30px;
     text-decoration: underline;
-
 }
-#box {display: grid;
+
+#box {
+    display: grid;
     grid-template-columns: repeat(2, 2fr);
     gap: 10px 20px;
     position: relative;
 }
+
 #box p {
     background-color: #333;
     color: #f8a81e;
@@ -257,12 +252,14 @@ mark:hover{
     text-transform: uppercase;
     padding: 15px;
 }
+
 #box p span {
     display: ruby;
     text-align: center;
     font-size: 18px;
     color: white;
 }
+
 #box p a {
     color: #f8a81e;
     text-decoration: none;
@@ -280,124 +277,54 @@ mark:hover{
     color: #fff;
     cursor: pointer;
 }
-#contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; /* Center vertically */
-    background: #f8a81e;
-    height: 100vh; /* Full viewport height */
-    padding: 0; 
-    position: relative;
-}
-
-#cont {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-between;
-    /* flex-direction: row; */
-    background: black;
-    font-size: 18px;
-    color: white;
-    text-align: left; /* Center text */
-    border-radius: 12px;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.75);
-    padding: 10px 0px;/* Center the element */
-}
-
-#form {
-    flex: 1;
-    margin: 10px 20px;
-}
 
 #form input, #form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
-    border: 1px solid #ccc; /* Change as needed */
+    border: 1px solid #ccc;
 }
 
 #form button {
     padding: 10px 20px;
-    background-color: orange; /* Change as needed */
-    color: #fff; /* Change as needed */
+    background-color: orange;
+    color: #fff;
     border: none;
     border-radius: 50px;
     cursor: pointer;
 }
 
-#info {
-    flex: 1;
-    margin: 10px 20px;
-}
-
 #info h4 {
     font-size: 1.2em;
-    color:orange;
+    color: orange;
 }
 
 #info p {
     font-size: 1em;
-    color: #ffffff; /* Change as needed */
-}
-#projects {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; /* Center vertically */
-    background: #f8a81e;
-    height: 100vh; /* Full viewport height */
-    padding: 0; 
-    position: relative;
+    color: #ffffff;
 }
 
-
-#proj {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-between;
-    /* flex-direction: row; */
-    background: black;
-    font-size: 18px;
-    color: white;
-    text-align: left; /* Center text */
-    border-radius: 12px;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.75);
-    padding: 10px 0px;/* Center the element */
-}
-#proj1,#proj2,#proj3:hover{
-    cursor:grab;
-}
-#proj div {
-    flex: 1;
-    margin: 10px;
-    text-align: center;
+#proj1, #proj2, #proj3,:hover {
+    cursor: grab;
 }
 
 #proj img {
     width: 250px;
 }
 
-#proj h4 {
-    font-size: 1.2em;
-    color: #fffefe; /* Change as needed */
-}
-
 #proj p {
     font-size: 1em;
-    color: #cdc0c0; /* Change as needed */
-    width:350px;
+    color: #cdc0c0;
+    width: 350px;
     height: 300px;
-    border: 1px solid #666; /* Change as needed */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    border: 1px solid #666;
+    box-sizing: border-box;
 }
-
+ 
+/* Small screens - Mobile view */
 @media only screen and (max-width: 600px) {
+    /* Navbar styling */
     #navb ul {
         flex-direction: column;
         background-color: black;
@@ -407,36 +334,41 @@ mark:hover{
         position: absolute;
         top: 0;
         right: -100%;
-        transition: 0.3s ease-in-out;
+        transition: right 0.3s ease-in-out;
     }
+
+    /* Display menu button */
     #menu-button {
-        display: block; /* Show only in mobile view */
-    }
-
-    #navb ul.active {
-        right: 0;
-    }
-
-    #navb ul li {
-        margin: 20px 0;
-        text-align: center;
-    }
-
-    #navb ul li a {
-        font-size: 20px;
-        padding: 10px 20px;
-    }
-
-    #navb::before {
-        content: '☰';
+        display: block;
         position: absolute;
         top: 10px;
         right: 20px;
         font-size: 30px;
         color: orange;
         cursor: pointer;
+        z-index: 10;
     }
 
+    /* Add an active class to show the menu when button is clicked */
+    #navb ul.active {
+        right: 0;
+    }
+
+    /* Center navigation links */
+    #navb ul li {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    /* Increase font size for links */
+    #navb ul li a {
+        font-size: 20px;
+        padding: 10px 20px;
+        color: white;
+        text-decoration: none;
+    }
+
+    /* Responsive positioning and sizing */
     #boy {
         width: 100%;
         top: 20%;
@@ -451,11 +383,40 @@ mark:hover{
         padding: 20px;
     }
 
+    /* Center text on smaller screens */
     #abt, #cont, #proj {
         flex-direction: column;
         text-align: center;
     }
-
+    .container {
+        display: flex; /* Use flexbox for horizontal alignment */
+        cursor: pointer;
+        align-items: center; /* Vertically center the bars */
+        gap: 6px; /* Add space between the bars */
+      }
+      
+      .bar1, .bar2, .bar3 {
+        width: 5px; /* Change the width to height */
+        height: 35px; /* Change the height to width */
+        background-color: #333;
+        transition: 0.4s;
+      }
+      
+      /* Rotate first bar */
+      .change .bar1 {
+        transform: translate(11px, 0) rotate(-45deg);
+      }
+      
+      /* Fade out the second bar */
+      .change .bar2 {
+        opacity: 0;
+      }
+      
+      /* Rotate last bar */
+      .change .bar3 {
+        transform: translate(-11px, 0) rotate(45deg);
+      }
+     
     #abt section, #form, #info, #proj div {
         margin: 10px 0;
     }
@@ -498,6 +459,8 @@ mark:hover{
         font-size: 80px;
     }
 }
+
+/* Medium screens - Tablets */
 @media only screen and (min-width: 601px) and (max-width: 900px) {
     #navb ul {
         padding: 10px;
@@ -564,122 +527,107 @@ mark:hover{
         font-size: 100px;
     }
 }
-.container{
-    width: 1000px;
-    position: relative;
+
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     text-align: center;
-    
-  }
-  
-  .container .card{
+}
+
+.container .card {
     position: relative;
-    
-  }
-  
-  .container .card .face{
-    width:300px;
+    margin: 10px;
+}
+
+.container .card .face {
+    width: 100%;
+    max-width: 300px;
     height: 200px;
-    transition:.4s;
-    
-  }
-  
-  .container .card .face.face1{
+    transition: .4s;
+}
+
+.container .card .face.face1 {
     position: relative;
     background: #333;
     display: flex;
     justify-content: center;
-    align-content:center;
     align-items: center;
     z-index: 1;
     transform: translateY(100px);
-  }
-  
-  .container .card:hover .face.face1{
-    transform: translateY(0);
-    box-shadow:
-      inset 0 0 60px whitesmoke,
-      inset 20px 0 80px #f8a81e,
-      inset -20px 0 80px #e71d36,
-      inset 20px 0 300px #f8a81e,
-      inset -20px 0 300px #e71d36,
-      0 0 50px #fff,
-      -10px 0 80px #f8a81e,
-      10px 0 80px #e71d36;
-     
-  }
-  
-  
-  .container .card .face.face1 .content{
-    opacity: .2;
-    transition:  0.5s;
-    text-align: center;
+}
 
-  }
-  
-  .container .card:hover .face.face1 .content{
+.container .card:hover .face.face1 {
+    transform: translateY(0);
+    box-shadow: inset 0 0 60px whitesmoke, inset 20px 0 80px #f8a81e, inset -20px 0 80px #e71d36, inset 20px 0 300px #f8a81e, inset -20px 0 300px #e71d36, 0 0 50px #fff, -10px 0 80px #f8a81e, 10px 0 80px #e71d36;
+}
+
+.container .card .face.face1 .content {
+    opacity: .2;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.container .card:hover .face.face1 .content {
     opacity: 1;
-   
-  }
-  
-  .container .card .face.face1 .content i{
+}
+
+.container .card .face.face1 .content i {
     font-size: 3em;
     color: white;
     display: inline-block;
-     
-  }
-  
-  .container .card .face.face1 .content h3{
+}
+
+.container .card .face.face1 .content h3 {
     font-size: 1em;
     color: white;
     text-align: center;
-    
-  
-  }
-  
-  .container .card .face.face1 .content a{
-     transition: .5s;
-  }
-  
-  .container .card .face.face2{
-     position: relative;
-     background: whitesmoke;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     padding: 20px;
+}
+
+.container .card .face.face1 .content a {
+    transition: .5s;
+}
+
+.container .card .face.face2 {
+    position: relative;
+    background: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
     box-sizing: border-box;
-    box-shadow: 0 20px 50px rgba(0,0,0,.8);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .8);
     transform: translateY(-100px);
-  }
-  
-  .container .card:hover .face.face2{
-      transform: translateY(0);
-  
-  
-  }
-  
-  .container .card .face.face2 .content p, a{
+}
+
+.container .card:hover .face.face2 {
+    transform: translateY(0);
+}
+
+.container .card .face.face2 .content p, a {
     font-size: 10pt;
-    margin: 0 ;
+    margin: 0;
     padding: 0;
-    color:#000;
-  }
-  
-  .container .card .face.face2 .content a{
-    text-decoration:none;
+    color: #000;
+}
+
+.container .card .face.face2 .content a {
+    text-decoration: none;
     color: black;
     box-sizing: border-box;
-    outline : 1px dashed #333;
+    outline: 1px dashed #333;
     padding: 10px;
     margin: 15px 0 0;
     display: inline-block;
-  }
-  
-  .container .card .face.face2 .content a:hover{
-    background: #333 ;
-    color: whitesmoke; 
-    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
-  }
+}
+
+.container .card .face.face2 .content a:hover {
+    background: #333;
+    color: whitesmoke;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+

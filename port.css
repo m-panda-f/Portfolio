@@ -295,15 +295,6 @@ mark:hover {
     cursor: pointer;
 }
 
-#info h4 {
-    font-size: 1.2em;
-    color: orange;
-}
-
-#info p {
-    font-size: 1em;
-    color: #ffffff;
-}
 
 #proj1, #proj2, #proj3,:hover {
     cursor: grab;

@@ -1,155 +1,132 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="portfolioApp">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faizan's Portfolio</title>
+    <title>Mohammed Faizan | Portfolio</title>
     <link rel="shortcut icon" href="PFP-modified.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <link rel="icon" type="image/x-icon" href="faizan-logo.png">
     <link rel="stylesheet" href="port.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script src="port.js"></script>
+    
 </head>
-<body ng-controller="PortfolioCtrl">
-   
+<body id="body">
+    
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo-link">
+                <img src="faizan-logo.png" alt="Faizan Logo" class="header-logo">
+            </a>
+            
+            <button id="menu-button" aria-label="Menu">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            
+            <ul id="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
 
-    <!-- Navigation -->
-    <!-- Only showing the changed parts -->
-<nav id="navb" ng-class="{'dark-mode': darkMode}">
-  <div class="nav-container">
-      <button id="menu-button" aria-label="Menu">
-          <div class="hamburger" ng-class="{'active': menuOpen}" ng-click="toggleMenu()">
-              <span></span>
-              <span></span>
-              <span></span>
-          </div>
-      </button>
-      
-      <!-- Theme Toggle moved inside nav -->
-      <div class="theme-toggle">
-          <input type="radio" id="toggle-on" name="theme" ng-checked="!darkMode" ng-click="setLightMode()">
-          <label for="toggle-on" title="Light Mode">☀️</label>
-          <input type="radio" id="toggle-off" name="theme" ng-checked="darkMode" ng-click="setDarkMode()">
-          <label for="toggle-off" title="Dark Mode">🌙</label>
-      </div>
-      
-      <ul ng-class="{'active': menuOpen}">
-          <li><a ng-click="showSection('home'); menuOpen = false">HOME</a></li>
-          <li><a ng-click="showSection('about'); menuOpen = false">ABOUT</a></li>
-          <li><a ng-click="showSection('projects'); menuOpen = false">PROJECTS</a></li>
-          <li><a ng-click="showSection('contact'); menuOpen = false">CONTACT</a></li>
-      </ul>
-  </div>
-</nav>
+            <div class="theme-toggle">
+                <input type="checkbox" id="theme-switch" aria-label="Toggle Dark/Light Mode">
+                <label for="theme-switch" class="switch-label">
+                    <i class="fas fa-sun light-icon"></i>
+                    <i class="fas fa-moon dark-icon"></i>
+                </label>
+            </div>
+        </div>
+    </nav>
 
-    <!-- Main Content -->
     <main>
-        <!-- Home Section -->
-        <section id="home" class="section" ng-show="currentSection === 'home'" ng-class="{'dark-mode': darkMode}">
+        <section id="home" class="section active">
             <div class="home-content">
                 <div class="home-text animate__animated animate__fadeInLeft">
-                    <h2>Hi there! I'm <mark>Mohammed Faizan</mark></h2>
-                    <p class="typing-text">I am a Computer Science student at NIE(North). I have always been interested in programming, Learning new stuff in web development, Mobile applications, Designing and much more....</p>
+                    <h1>Hi There! I'm <mark>Mohammed Faizan</mark></h1>
+                    <p class="lead-text">I am a Computer Science student at NIE(North). I have always been interested in programming, Learning new stuff in web development, Mobile applications, Designing and much more....</p>
                     <div class="social-links">
-                        <a href="https://github.com/m-panda-f" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/mohammed-faizan-b3305b299" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" ng-click="showSection('contact')"><i class="fas fa-envelope"></i></a>
+                        <a href="https://github.com/m-panda-f" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/mohammed-faizan-b3305b299" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#contact" aria-label="Email"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
                 <div class="home-image animate__animated animate__fadeInRight">
                     <div class="image-container">
                         <img src="Profile.jpeg" alt="Mohammed Faizan" class="profile-image">
-                        <div class="image-border"></div>
                     </div>
                 </div>
             </div>
-            <div class="scroll-down" ng-click="showSection('about')">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="scroll-down">
+                <a href="#about" aria-label="Scroll Down to About Section">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="section" ng-show="currentSection === 'about'" ng-class="{'dark-mode': darkMode}">
+        <section id="about" class="section">
             <div class="section-title">
                 <div>RESUME</div>
-                <p>ABOUT</p>
+                <p>ABOUT ME</p>
             </div>
             <div class="about-content">
                 <div class="personal-info animate__animated animate__fadeInUp">
                     <h4>Personal Info</h4>
-                    <div><strong>Name: </strong> Mohammed Faizan</div>
-                    <div><strong>Phone: </strong> +91 9916588232</div>
-                    <div><strong>Qualification: </strong>B.E (Computer Science)</div>
-                    <div><strong>Age: </strong> 21</div>
-                    <div><strong>Languages: </strong> English, Hindi, Kannada, Urdu</div>
-                    <div><strong>Nationality: </strong>Indian</div>
+                    <ul>
+                        <li><strong>Name:</strong> Mohammed Faizan</li>
+                        <li><strong>Qualification:</strong> B.E (Computer Science)</li>
+                        <li><strong>Age:</strong> 22</li>
+                        <li><strong>Languages:</strong> English, Hindi, Kannada, Urdu</li>
+                        <li><strong>Nationality:</strong> Indian</li>
+                    </ul>
                 </div>
                 <div class="stats-box animate__animated animate__fadeInUp">
                     <div class="stat-item">
-                        <div class="stat-number" count-up end-val="6" duration="2">6</div>
+                        <div class="stat-number" data-target="6">0</div>
                         <div class="stat-label">Projects</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number" count-up end-val="3" duration="2">3</div>
+                        <div class="stat-number" data-target="3">0</div>
                         <div class="stat-label">Internships</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">10+</div>
+                        <div class="stat-number" data-target="10" data-suffix="+">0+</div>
                         <div class="stat-label">Awards</div>
                     </div>
-                    <div class="stat-item">
+                    <div class="stat-item ">
                         <a href="https://drive.google.com/uc?export=download&id=1wCgiDXyz3OA87iShmnUNOCTmwtVrcydJ" download class="download-btn">
-                            <i class="fas fa-download"></i> Download CV
+                            <div class="stat-label">Download CV</div>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="section" ng-show="currentSection === 'projects'" ng-class="{'dark-mode': darkMode}">
+        <section id="projects" class="section">
             <div class="section-title">
                 <div>MY WORK</div>
                 <p>PROJECTS</p>
             </div>
             <div class="projects-container">
-                <div class="project-slider">
-                    <button class="arrow-btn prev" ng-click="prevProject()" ng-disabled="currentProjectIndex === 0">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    
-                    <div class="project-cards">
-                        <div class="project-card" ng-repeat="project in projects" 
-                             ng-class="{'active': $index === currentProjectIndex, 'left': $index < currentProjectIndex, 'right': $index > currentProjectIndex}">
-                            <div class="card-front">
-                                <i class="fas fa-code"></i>
-                                <h3>{{project.title}}</h3>
-                            </div>
-                            <div class="card-back">
-                                <p>{{project.description}}</p>
-                                <a ng-href="{{project.link}}" target="_blank" class="project-link">View Project</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <button class="arrow-btn next" ng-click="nextProject()" ng-disabled="currentProjectIndex === projects.length - 1">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
                 </div>
-            </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section" ng-show="currentSection === 'contact'" ng-class="{'dark-mode': darkMode}">
+        <section id="contact" class="section">
             <div class="section-title">
                 <div>GET IN TOUCH</div>
                 <p>CONTACT</p>
             </div>
             <div class="contact-content">
-                <form id="contact-form" ng-submit="sendEmail()" class="animate__animated animate__fadeInLeft">
+                <form id="contact-form" class="animate__animated animate__fadeInLeft">
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Name" required>
                     </div>
@@ -159,19 +136,16 @@
                     <div class="form-group">
                         <textarea name="message" placeholder="Message" required></textarea>
                     </div>
-                    <button type="submit" ng-disabled="sending">
-                        <span ng-if="!sending">Send</span>
-                        <span ng-if="sending"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
+                    <button type="submit" id="submit-btn">
+                        <span>Send Message</span>
                     </button>
-                    <div class="form-message" ng-class="{'success': messageSent, 'error': messageError}" ng-if="messageSent || messageError">
-                        {{messageText}}
-                    </div>
+                    <div class="form-message" id="form-message"></div>
                 </form>
                 <div class="contact-info animate__animated animate__fadeInRight">
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <h4>Address</h4>
-                        <p>#63 LIG 2 KHB Colony Kalayangiri Mysore</p>
+                        <p>Karnataka, India</p>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-envelope"></i>
@@ -182,8 +156,8 @@
                         <i class="fas fa-globe"></i>
                         <h4>Online</h4>
                         <div class="social-links">
-                            <a href="https://github.com/m-panda-f" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="https://www.linkedin.com/in/mohammed-faizan-b3305b299" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                            <a href="https://github.com/m-panda-f" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://www.linkedin.com/in/mohammed-faizan-b3305b299" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
                         </div>
                     </div>
                 </div>
@@ -191,15 +165,11 @@
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer ng-class="{'dark-mode': darkMode}">
-        <p>&copy; 2023 Mohammed Faizan. All rights reserved.</p>
-        <div class="footer-links">
-            <a ng-click="showSection('home')">Home</a>
-            <a ng-click="showSection('about')">About</a>
-            <a ng-click="showSection('projects')">Projects</a>
-            <a ng-click="showSection('contact')">Contact</a>
-        </div>
+    <footer>
+        <p>&copy; 2025 Mohammed Faizan. All rights reserved.</p>
     </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="port.js"></script>
 </body>
 </html>

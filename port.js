@@ -93,6 +93,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     tags: ["Python", "Django", "SQL"],
                     icon: "fas fa-store",
                     link: "https://github.com/m-panda-f/Choco-Mohammed-Faizan-"
+                },
+                {
+                    title: "Pandas-Weather",
+                    desc: "A sleek weather app providing real-time updates and forecasts using React.js and WeatherAPI.",
+                    tags: ["React.js", "Bootstrap", "WeatherAPI"],
+                    icon: "fas fa-sun",
+                    link: "https://pandas-weather.onrender.com/"
                 }
             ];
 

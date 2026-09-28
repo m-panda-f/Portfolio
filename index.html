@@ -3,226 +3,817 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Mohammed Faizan | Full Stack Developer</title>
+
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link rel="icon" type="image/x-icon" href="faizan-logo.png">
     <link rel="stylesheet" href="port.css">
-    
 </head>
-<body >
-    
-     <div class="grid-bg"></div>
+
+<body>
+
+    <div class="grid-bg"></div>
 
     <!-- Custom Cursor -->
     <div id="cursor-dot"></div>
     <div id="cursor-ring"></div>
 
-    <!-- Navigation -->
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
     <nav>
         <div class="nav-inner">
-            <a href="#" class="logo hover-trigger">
-                <span><i class="fas fa-code"></i></span> Faizan.dev
+
+            <a href="#hero" class="logo hover-trigger">
+                <span>
+                    <i class="fas fa-code"></i>
+                </span>
+                Faizan.dev
             </a>
-            
+
             <div class="hamburger hover-trigger" id="menu-btn">
-                <div></div><div></div><div></div>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
 
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="#hero" class="nav-link active hover-trigger">Home</a></li>
-                <li><a href="#about" class="nav-link hover-trigger">About</a></li>
-                <li><a href="#projects" class="nav-link hover-trigger">Projects</a></li>
-                <li><a href="#experience" class="nav-link hover-trigger">Timeline</a></li>
-                <li><a href="#contact" class="nav-link hover-trigger">Contact</a></li>
+
+                <li>
+                    <a href="#hero"
+                       class="nav-link active hover-trigger">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#about"
+                       class="nav-link hover-trigger">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#projects"
+                       class="nav-link hover-trigger">
+                        Projects
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#experience"
+                       class="nav-link hover-trigger">
+                        Experience
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact"
+                       class="nav-link hover-trigger">
+                        Contact
+                    </a>
+                </li>
+
             </ul>
+
         </div>
     </nav>
 
-    <!-- Hero Section -->
+
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+
     <section id="hero">
+
         <div class="hero-content">
+
             <div class="hero-text reveal">
-                <h5><span style="color: var(--color-primary);">●</span> Available for hire</h5>
-                <h1>Building the <span class="highlight">Future</span> of the Web</h1>
-                <p>I am Mohammed Faizan, a Computer Science student and Full Stack Developer. I fuse clean code with modern design to create immersive digital experiences.</p>
-                
-                <div class="hero-btns" style="display: flex; gap: 15px;">
-                    <a href="#projects" class="btn btn-primary hover-trigger">
-                        View Work <i class="fas fa-arrow-right"></i>
+
+                <h5>
+                    <span style="color: var(--color-primary);">●</span>
+                    Available for opportunities
+                </h5>
+
+                <h1>
+                    Building
+                    <span class="highlight">Scalable</span>
+                    Digital Products
+                </h1>
+
+                <p>
+                    I’m Mohammed Faizan, a Full Stack Developer with hands-on
+                    experience building web and mobile applications. I work
+                    across frontend, backend, APIs, databases, and cloud
+                    services to turn business requirements into reliable,
+                    production-ready digital products.
+                </p>
+
+                <div class="hero-btns"
+                     style="display: flex; gap: 15px;">
+
+                    <a href="#projects"
+                       class="btn btn-primary hover-trigger">
+                        View Work
+                        <i class="fas fa-arrow-right"></i>
                     </a>
-                    <a href="#contact" class="btn btn-outline hover-trigger">
+
+                    <a href="#contact"
+                       class="btn btn-outline hover-trigger">
                         Contact Me
                     </a>
+
                 </div>
+
             </div>
 
-            <div class="hero-img-box reveal" style="transition-delay: 0.2s;">
-                <!-- Fallback to placeholder if image missing -->
-                <img src="Profile.png" alt="Mohammed Faizan" class="hero-img" onerror="this.src='https://ui-avatars.com/api/?name=Mohammed+Faizan&background=1f2937&color=fff&size=512'">
-                
-                <!-- Floating Code Decorations -->
+
+            <div class="hero-img-box reveal"
+                 style="transition-delay: 0.2s;">
+
+                <img src="Profile.png"
+                     alt="Mohammed Faizan"
+                     class="hero-img"
+                     onerror="this.src='https://ui-avatars.com/api/?name=Mohammed+Faizan&background=1f2937&color=fff&size=512'">
+
                 <div class="code-snippet snippet-1">
-                    &lt;Developer /&gt;<br>
-                    state = "creative";
+                    &lt;FullStackDeveloper /&gt;<br>
+                    experience = "hands-on";
                 </div>
+
                 <div class="code-snippet snippet-2">
-                    const skills = [<br>
-                    &nbsp;&nbsp;"React", "Node"<br>
+                    const stack = [<br>
+                    &nbsp;&nbsp;"React", "Node.js",<br>
+                    &nbsp;&nbsp;"Flutter"<br>
                     ];
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- About & Skills Section -->
+
+    <!-- =========================
+         ABOUT SECTION
+    ========================== -->
+
     <section id="about" class="section-alt">
+
         <div class="section-header reveal">
-            <span class="section-subtitle">Who I Am</span>
-            <h2 class="section-title">About & Skills</h2>
+
+            <span class="section-subtitle">
+                Who I Am
+            </span>
+
+            <h2 class="section-title">
+                About Me & Skills
+            </h2>
+
         </div>
+
 
         <div class="about-grid">
+
             <div class="about-text reveal">
+
                 <p style="color: var(--color-text-muted); margin-bottom: 20px;">
-                   I completed my B.E. in Computer Science from NIE (North), where I developed a strong foundation in software development and problem-solving. I’m passionate about turning complex challenges into clean, efficient solutions, and I enjoy bridging the gap between backend logic and frontend aesthetics to create seamless, well-designed digital experiences.
+
+                    I completed my B.E. in Computer Science from the
+                    National Institute of Engineering (NIE), where I
+                    developed a strong foundation in software engineering,
+                    problem-solving, and application development.
+<br>
+                   I’m a working Full Stack Developer with hands-on experience building and maintaining web and mobile applications. Currently, I work as a Junior Full Stack Developer at Tone Garage & IRONIX, where I independently handle end-to-end development across frontend, backend, APIs, databases, and mobile applications. I enjoy turning real-world requirements into scalable, reliable, and user-focused digital products while continuously learning and exploring new technologies.
+
+
                 </p>
-                
-                <div style="margin-top: 30px; display: flex; gap: 40px;">
+
+
+                <div style="
+                    margin-top: 30px;
+                    display: flex;
+                    gap: 40px;
+                    flex-wrap: wrap;
+                ">
+
                     <div>
-                        <h3 class="highlight" style="font-size: 2rem; color: var(--color-primary);">6+</h3>
-                        <span style="font-size: 0.9rem; color: var(--color-text-muted);">Projects Completed</span>
+
+                        <h3 class="highlight"
+                            style="
+                                font-size: 2rem;
+                                color: var(--color-primary);
+                            ">
+                            4+
+                        </h3>
+
+                        <span style="
+                            font-size: 0.9rem;
+                            color: var(--color-text-muted);
+                        ">
+                            Featured Projects
+                        </span>
+
                     </div>
-                    <!-- CV DOwnload button-->
-                    
+
+
                     <div>
-                        <h3 class="highlight" style="font-size: 2rem; color: var(--color-secondary);">10+</h3>
-                        <span style="font-size: 0.9rem; color: var(--color-text-muted);">Awards & Certs</span>
+
+                        <h3 class="highlight"
+                            style="
+                                font-size: 2rem;
+                                color: var(--color-secondary);
+                            ">
+                            6+
+                        </h3>
+
+                        <span style="
+                            font-size: 0.9rem;
+                            color: var(--color-text-muted);
+                        ">
+                            Months Full Stack Experience
+                        </span>
+
                     </div>
+
                 </div>
-                <a href="https://drive.google.com/uc?export=download&id=1MKGJxFRgP0vkav5UQqcuVmQuUxL90xlD   " download class="btn btn-outline hover-trigger" style="align-self: center; margin-top: 30px;">
-                        Download CV <i class="fas fa-download" style="margin-left: 8px;"></i>
-                    </a>
+
+
+                <!-- Download CV -->
+
+                <a href="https://drive.google.com/uc?export=download&id=1Oh34Gq8ytg5uolwfSfDaB8COhDUFWf1W"
+                   download
+                   class="btn btn-outline hover-trigger"
+                   style="
+                       align-self: center;
+                       margin-top: 30px;
+                   ">
+
+                    Download CV
+
+                    <i class="fas fa-download"
+                       style="margin-left: 8px;">
+                    </i>
+
+                </a>
+
             </div>
 
-            <div class="skills-wrapper reveal" style="transition-delay: 0.2s;">
-                <div class="skills-header"><i class="fas fa-layer-group" style="color: var(--color-secondary); margin-right: 8px;"></i> Tech Stack</div>
+
+            <!-- TECH STACK -->
+
+            <div class="skills-wrapper reveal"
+                 style="transition-delay: 0.2s;">
+
+                <div class="skills-header">
+
+                    <i class="fas fa-layer-group"
+                       style="
+                           color: var(--color-secondary);
+                           margin-right: 8px;
+                       ">
+                    </i>
+
+                    Tech Stack
+
+                </div>
+
+
                 <div class="skills-cloud">
-                    <span class="skill-tag hover-trigger">JavaScript (ES6+)</span>
-                    <span class="skill-tag hover-trigger">React.js</span>
-                    <span class="skill-tag hover-trigger">Node.js</span>
-                    <span class="skill-tag hover-trigger">Java</span>
-                    <span class="skill-tag hover-trigger">C/C++</span>
-                    <span class="skill-tag hover-trigger">RESTful APIs</span>
-                    <span class="skill-tag hover-trigger">Python</span>
-                    <span class="skill-tag hover-trigger">Django</span>
-                    <span class="skill-tag hover-trigger">HTML5 & CSS3</span>
-                    <span class="skill-tag hover-trigger">Tailwind CSS</span>
-                    <span class="skill-tag hover-trigger">SQL / MongoDB</span>
-                    <span class="skill-tag hover-trigger">Git & GitHub</span>
-                    <span class="skill-tag hover-trigger">Flutter/Dart</span>
-                    <span class="skill-tag hover-trigger">Salesforce Apex</span>
-                    <span class="skill-tag hover-trigger">UI/UX Design</span>
+
+                    <span class="skill-tag hover-trigger">
+                        JavaScript (ES6+)
+                    </span>
+
+                    <span class="skill-tag hover-trigger">
+                        React.js
+                    </span>
+
+                    <span class="skill-tag hover-trigger">
+                        Node.js
+                    </span>
+
+                    <span class="skill-tag hover-trigger">
+                        Express.js
+                    </span>
+
+                    <span class="skill-tag hover-trigger">
+                        Flutter
+                    </span>
+
+                    <span class="skill-tag hover-trigger">
+                        Firebase
+                    </span>
+
+                    <span class="skill-tag hover-trigger">
+                        MongoDB
+                    </span>
+
+                    <span class="skill-tag hover-trigger">
+                        MySQL
+                    </span>
+
+                    <span class="skill-tag hover-trigger">
+                        REST APIs
+                    </span>
+
+                    <span class="skill-tag hover-trigger">
+                        HTML5
+                    </span>
+
+                    <span class="skill-tag hover-trigger">
+                        CSS3
+                    </span>
+
+                    <span class="skill-tag hover-trigger">
+                        Bootstrap
+                    </span>
+
+                    <span class="skill-tag hover-trigger">
+                        Python
+                    </span>
+
+                    <span class="skill-tag hover-trigger">
+                        Java
+                    </span>
+
+                    <span class="skill-tag hover-trigger">
+                        Git & GitHub
+                    </span>
+
+                    <span class="skill-tag hover-trigger">
+                        Postman
+                    </span>
+
+                    <span class="skill-tag hover-trigger">
+                        Shopify
+                    </span>
+
+                    <span class="skill-tag hover-trigger">
+                        Liquid
+                    </span>
+
+                    <span class="skill-tag hover-trigger">
+                        SQL
+                    </span>
+
+                    <span class="skill-tag hover-trigger">
+                        JWT Authentication
+                    </span>
+
+                    <span class="skill-tag hover-trigger">
+                        MVC Architecture
+                    </span>
+
+                    <span class="skill-tag hover-trigger">
+                        Google APIs
+                    </span>
+
+                    <span class="skill-tag hover-trigger">
+                        Google Maps API
+                    </span>
+
+                    <span class="skill-tag hover-trigger">
+                        AI Models
+                    </span>
+
+                    <span class="skill-tag hover-trigger">
+                        SEO
+                    </span>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- Projects Section -->
+
+    <!-- =========================
+         PROJECTS SECTION
+    ========================== -->
+
     <section id="projects">
+
         <div class="section-header reveal">
-            <span class="section-subtitle">Portfolio</span>
-            <h2 class="section-title">Featured Projects</h2>
+
+            <span class="section-subtitle">
+                Portfolio
+            </span>
+
+            <h2 class="section-title">
+                Featured Projects
+            </h2>
+
         </div>
 
-        <div class="projects-grid" id="projects-container">
-            <!-- Projects injected via JS -->
+
+        <!--
+            IMPORTANT:
+            Projects are generated dynamically by port.js.
+            Do not manually add project cards here.
+        -->
+
+        <div class="projects-grid"
+             id="projects-container">
         </div>
+
     </section>
 
-    <!-- Experience / Timeline -->
-    <section id="experience" class="section-alt">
+
+    <!-- =========================
+         EXPERIENCE SECTION
+    ========================== -->
+
+    <section id="experience"
+             class="section-alt">
+
         <div class="section-header reveal">
-            <span class="section-subtitle">My Journey</span>
-            <h2 class="section-title">Education & Experience</h2>
+
+            <span class="section-subtitle">
+                My Journey
+            </span>
+
+            <h2 class="section-title">
+                Education & Experience
+            </h2>
+
         </div>
+
 
         <div class="timeline-container">
+
             <div class="timeline-line"></div>
-        
-            <!-- Timeline Item 2 -->
+
+
+            <!-- CURRENT ROLE -->
+
             <div class="timeline-item reveal">
+
                 <div class="timeline-dot"></div>
-                <span class="timeline-date">Feb 2025 - May 2025</span>
+
+                <span class="timeline-date">
+                    Mar 2026 – Present
+                </span>
+
                 <div class="timeline-card hover-trigger">
-                    <h3 class="timeline-title">Front-End Developer Intern</h3>
-                    <div class="timeline-subtitle">Infowise Services</div>
-                    <p style="margin-top: 10px; font-size: 0.9rem; color: var(--color-text-muted);">
-                        Collaborated with senior devs to build responsive interfaces using React.js. Improved site performance by 20%.
+
+                    <h3 class="timeline-title">
+                        Junior Full Stack Developer
+                    </h3>
+
+                    <div class="timeline-subtitle">
+                        Tone Garage & IRONIX
+                    </div>
+
+                    <p style="
+                        margin-top: 10px;
+                        font-size: 0.9rem;
+                        color: var(--color-text-muted);
+                    ">
+
+                        Sole developer responsible for the company's
+                        technology ecosystem. Designed, developed, and
+                        maintained web and mobile applications, architected
+                        backend services and RESTful APIs, managed relational
+                        and SQL databases, developed Flutter applications,
+                        and worked directly with business stakeholders to
+                        deliver production-ready solutions.
+
                     </p>
+
                 </div>
-            </div>
-            <div class="timeline-item reveal">
-                <div class="timeline-dot"></div>
-                <span class="timeline-date">2023-2024</span>
-                <div class="timeline-card hover-trigger">
-                    <h3 class="timeline-title">Salesforce Virtual Developer</h3>
-                    <div class="timeline-subtitle">Salesforce</div>
-                    <p style="margin-top: 10px; font-size: 0.9rem; color: var(--color-text-muted);">
-                        Completed Salesforce's Virtual Developer Program, gaining hands-on experience with CRM solutions and Apex programming.
-                    </p>
-                </div>
+
             </div>
 
-            <!-- Timeline Item 3 -->
+
+            <!-- INFOWISE -->
+
             <div class="timeline-item reveal">
+
                 <div class="timeline-dot"></div>
-                <span class="timeline-date">2022</span>
+
+                <span class="timeline-date">
+                    Feb 2025 – May 2025
+                </span>
+
                 <div class="timeline-card hover-trigger">
-                    <h3 class="timeline-title">Hackathon Appriciation </h3>
-                    <div class="timeline-subtitle">State Level Hackathon</div>
-                    <p style="margin-top: 10px; font-size: 0.9rem; color: var(--color-text-muted);">
-                        Developed "Eve's Guide", a safety app for women using Flutter, Apprecitated for the Idea among 50+ teams.
+
+                    <h3 class="timeline-title">
+                        Full Stack Developer Intern
+                    </h3>
+
+                    <div class="timeline-subtitle">
+                        Infowise Services
+                    </div>
+
+                    <p style="
+                        margin-top: 10px;
+                        font-size: 0.9rem;
+                        color: var(--color-text-muted);
+                    ">
+
+                        Developed and maintained full-stack web features
+                        using React.js, Node.js, Express.js, and MySQL.
+                        Built REST APIs and CRUD operations, integrated
+                        frontend components, collaborated on responsive
+                        user experiences, and debugged and optimized
+                        existing applications.
+
                     </p>
+
                 </div>
+
             </div>
+
+
+            <!-- IQUEST -->
+
+            <div class="timeline-item reveal">
+
+                <div class="timeline-dot"></div>
+
+                <span class="timeline-date">
+                    Apr 2022 – Jun 2022
+                </span>
+
+                <div class="timeline-card hover-trigger">
+
+                    <h3 class="timeline-title">
+                        Software Development Intern
+                    </h3>
+
+                    <div class="timeline-subtitle">
+                        IQuest Technologies Pvt. Ltd.
+                    </div>
+
+                    <p style="
+                        margin-top: 10px;
+                        font-size: 0.9rem;
+                        color: var(--color-text-muted);
+                    ">
+
+                        Worked on backend development using Java and Python
+                        with strong application of OOP principles. Developed
+                        modular and reusable components following clean
+                        coding practices and assisted with application
+                        testing and debugging.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- B.E. -->
+
+            <div class="timeline-item reveal">
+
+                <div class="timeline-dot"></div>
+
+                <span class="timeline-date">
+                    2025
+                </span>
+
+                <div class="timeline-card hover-trigger">
+
+                    <h3 class="timeline-title">
+                        B.E. – Computer Science & Engineering
+                    </h3>
+
+                    <div class="timeline-subtitle">
+                        National Institute of Engineering, Mysore
+                    </div>
+
+                    <p style="
+                        margin-top: 10px;
+                        font-size: 0.9rem;
+                        color: var(--color-text-muted);
+                    ">
+
+                        Completed a Bachelor of Engineering in Computer
+                        Science and Engineering with a foundation in
+                        software development, programming, databases,
+                        application development, and problem-solving.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- DIPLOMA -->
+
+            <div class="timeline-item reveal">
+
+                <div class="timeline-dot"></div>
+
+                <span class="timeline-date">
+                    2022
+                </span>
+
+                <div class="timeline-card hover-trigger">
+
+                    <h3 class="timeline-title">
+                        Diploma
+                    </h3>
+
+                    <div class="timeline-subtitle">
+                        D. Bhanumaias Polytechnic
+                    </div>
+
+                    <p style="
+                        margin-top: 10px;
+                        font-size: 0.9rem;
+                        color: var(--color-text-muted);
+                    ">
+
+                        Completed Diploma-level technical education.
+
+                    </p>
+
+                </div>
+
+            </div>
+
         </div>
+
     </section>
 
-    <!-- Contact Section -->
+
+    <!-- =========================
+         CONTACT SECTION
+    ========================== -->
+
     <section id="contact">
+
         <div class="section-header reveal">
-            <span class="section-subtitle">Get In Touch</span>
-            <h2 class="section-title">Let's Work Together</h2>
+
+            <span class="section-subtitle">
+                Get In Touch
+            </span>
+
+            <h2 class="section-title">
+                Let's Work Together
+            </h2>
+
         </div>
+
 
         <div class="contact-container reveal">
+
+            <p style="
+                text-align: center;
+                color: var(--color-text-muted);
+                margin-bottom: 30px;
+            ">
+
+                Have a project, opportunity, or idea in mind?
+                Feel free to get in touch.
+
+            </p>
+
+
             <form id="contact-form">
+
                 <div class="form-row">
-                    <input type="text" placeholder="Your Name" required class="hover-trigger">
-                    <input type="email" placeholder="Your Email" required class="hover-trigger">
+
+                    <input type="text"
+                           placeholder="Your Name"
+                           required
+                           class="hover-trigger">
+
+                    <input type="email"
+                           placeholder="Your Email"
+                           required
+                           class="hover-trigger">
+
                 </div>
-                <input type="text" placeholder="Subject" style="margin-bottom: 20px;" class="hover-trigger">
-                <textarea placeholder="Tell me about your project..." style="margin-bottom: 20px;" class="hover-trigger"></textarea>
-                
+
+
+                <input type="text"
+                       placeholder="Subject"
+                       style="margin-bottom: 20px;"
+                       class="hover-trigger">
+
+
+                <textarea
+                    placeholder="Tell me about your project..."
+                    style="margin-bottom: 20px;"
+                    class="hover-trigger"></textarea>
+
+
                 <div style="text-align: center;">
-                    <button type="submit" class="btn btn-primary hover-trigger" style="width: 100%; justify-content: center;">
-                        Send Message <i class="fas fa-paper-plane"></i>
+
+                    <button type="submit"
+                            class="btn btn-primary hover-trigger"
+                            style="
+                                width: 100%;
+                                justify-content: center;
+                            ">
+
+                        Send Message
+
+                        <i class="fas fa-paper-plane"></i>
+
                     </button>
+
                 </div>
+
             </form>
 
-            <div style="margin-top: 40px; display: flex; justify-content: center; gap: 30px;">
-                <a href="https://github.com/m-panda-f" class="hover-trigger" style="font-size: 1.5rem; color: var(--color-text-muted);"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com" class="hover-trigger" style="font-size: 1.5rem; color: var(--color-text-muted);"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:mohammedfaizan123h@gmail.com" class="hover-trigger" style="font-size: 1.5rem; color: var(--color-text-muted);"><i class="fas fa-envelope"></i></a>
+
+            <!-- SOCIAL LINKS -->
+
+            <div style="
+                margin-top: 40px;
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+            ">
+
+                <a href="https://github.com/m-panda-f"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="hover-trigger"
+                   style="
+                       font-size: 1.5rem;
+                       color: var(--color-text-muted);
+                   ">
+
+                    <i class="fab fa-github"></i>
+
+                </a>
+
+                <a href="https://instagram.com/m_panda_f"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="hover-trigger"
+                   style="
+                       font-size: 1.5rem;
+                       color: var(--color-text-muted);
+                       ">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+
+                <a href="https://linkedin.com/in/mohammed-faizan-b3305b299"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="hover-trigger"
+                   style="
+                       font-size: 1.5rem;
+                       color: var(--color-text-muted);
+                   ">
+
+                    <i class="fab fa-linkedin"></i>
+
+                </a>
+
+
+                <a href="mailto:mohammedfaizan123h@gmail.com"
+                   class="hover-trigger"
+                   style="
+                       font-size: 1.5rem;
+                       color: var(--color-text-muted);
+                   ">
+
+                    <i class="fas fa-envelope"></i>
+
+                </a>
+
             </div>
+
         </div>
+
     </section>
 
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
     <footer>
-        <p>&copy; 2025 Mohammed Faizan. ></i></p>
+
+        <p>
+            &copy; 2026 Mohammed Faizan. All rights reserved.
+        </p>
+
     </footer>
+
+
+    <!-- JavaScript -->
     <script src="port.js"></script>
+
 </body>
 </html>

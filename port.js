@@ -50,7 +50,36 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             // --- 3. Projects Injection ---
-            const projects = [
+    const projects = [
+            {
+    title: "Tone Garage – Fitness Platform",
+    role: "Full Stack Developer",
+    desc: "Developed and maintained a complete fitness platform across web and mobile. Built scalable backend APIs, integrated Firebase Authentication, Cloud Firestore, Storage and Notifications, and worked directly with stakeholders to deliver production-ready features.",
+    tags: [
+        "Flutter",
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "Firebase"
+    ],
+    icon: "fas fa-dumbbell",
+    link: "https://tonegarage.in"
+},
+{
+    title: "IRONIX – Premium Fashion E-Commerce",
+    role: "Full Stack Developer",
+    desc: "Built and managed the complete e-commerce platform for a premium gym wear and streetwear brand. Customized the Shopify storefront, optimized performance and mobile responsiveness, implemented SEO practices, and integrated analytics and customer engagement features.",
+    tags: [
+        "Shopify",
+        "JavaScript",
+        "Liquid",
+        "HTML",
+        "CSS",
+        "SEO"
+    ],
+    icon: "fas fa-shirt",
+    link: "https://ironix.in"
+},
                 {
                     title: "Alumni Tracking System",
                     desc: "A full-stack platform to connect graduates. Built with MEAN Stack (MongoDB, Express, Angular, Node).",
